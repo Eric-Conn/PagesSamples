@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My 13 Photo Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Github Pages Supported Themes</h1>
+        
+        <p>I thought a gallery of the supported themes would be useful, so here it is.</p>
+        <p>Click on any photo to see it larger.</p>
+
+
+        <p id ='official_site'>Find links to each of the themes here:</p>
+        <a  href = 'https://pages.github.com/themes'>Official Github Pages Site</a>
+        <p>I have no affiliation with Github Pages.</p>
+
+        <!-- The Photo Grid -->
+        <div class="photo-grid">
+            <!-- To add your own photos, just change the src="..." attribute on each img tag -->
+            <div class="grid-item"><img src="samples/Architect.png" alt="Description of photo 1"></div>
+            <div class="grid-item"><img src="samples/Cayman.png" alt="Description of photo 2"></div>
+            <div class="grid-item"><img src="samples/Dinky.png" alt="Description of photo 3"></div>
+            <div class="grid-item"><img src="samples/Hacker.png" alt="Description of photo 4"></div>
+            <div class="grid-item"><img src="samples/Leap Day.png" alt="Description of photo 5"></div>
+            <div class="grid-item"><img src="samples/Merlot.png" alt="Description of photo 6"></div>
+            <div class="grid-item"><img src="samples/Midnight.png" alt="Description of photo 7"></div>
+            <div class="grid-item"><img src="samples/Minima.png" alt="Description of photo 8"></div>
+            <div class="grid-item"><img src="samples/Minimal.png" alt="Description of photo 9"></div>
+            <div class="grid-item"><img src="samples/Modernist.png" alt="Description of photo 10"></div>
+            <div class="grid-item"><img src="samples/Slate.png" alt="Description of photo 11"></div>
+            <div class="grid-item"><img src="samples/Tactile.png" alt="Description of photo 12"></div>
+            <div class="grid-item"><img src="samples/Time Machine.png" alt="Description of photo 13"></div>
+
+        </div>
+
+        
+    </div>
+
+    <!-- The Lightbox (hidden by default) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+   
+
+
+    <script src="script.js"></script>
+</body>
+</html>

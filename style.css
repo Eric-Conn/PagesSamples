@@ -1,0 +1,102 @@
+/* Basic Page Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+h1 {
+    color: #1c1e21;
+}
+
+/* The Core Grid Layout */
+.photo-grid {
+    display: grid;
+    /* This creates a responsive grid. It will fit as many 250px columns as it can.
+       On smaller screens, columns will wrap automatically. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem; /* The space between grid items */
+    margin-top: 2rem;
+}
+
+.grid-item {
+    position: relative; /* Needed for the hover effect */
+    overflow: hidden; /* Hides the overflowing part of the scaled image */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* Makes all grid items perfectly square */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crucial: scales the image to cover the container without stretching */
+    display: block; /* Removes any extra space below the image */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth zoom transition */
+}
+
+/* Hover Effect: Zoom in on the image */
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stays in place even when scrolling */
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+    
+    /* Center the image using Flexbox */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Add this class with JavaScript to show the lightbox */
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 5px;
+    animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#official_site{display: inline}
